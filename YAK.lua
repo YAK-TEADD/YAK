@@ -3662,7 +3662,7 @@ ALSmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, YAKTeam, 14, string.len(msg
 DevALS:del(YAK..'ALS:Texting:Pv') 
 end
 if text == 'تعطيل التواصل' and ChCheck(msg) or text == '↫ تعطيل التواصل ⌯' and ChCheck(msg) then  
-local YAKTeam = '⌯︙اهلا عزيزي ↫ '..ALSRank(msg)..' \n⌯︙تم تعطيل التواصل بنجاح'
+local YAKTeam = '- SoUrCe WaAD . \n— — — — — — — — — \n⌯︙اهلا عزيزي ↫ '..ALSRank(msg)..' \n⌯︙تم تعطيل التواصل بنجاح'
 ALSmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, YAKTeam, 14, string.len(msg.sender_user_id_))
 DevALS:set(YAK..'ALS:Texting:Pv',true) 
 end
