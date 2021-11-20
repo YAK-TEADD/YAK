@@ -6279,9 +6279,9 @@ end
 --     Source YAK     --
 if text == "سورس" and ChCheck(msg) or text == "السورس" and ChCheck(msg) or text == "يا سورس" and ChCheck(msg) or text == "↫  السورس ⌯" and ChCheck(msg) then
 Text = [[
-Welcome To Source
-⌯︙[𝚆𝚎𝚕𝚌𝚘𝚖 𝚝𝚘 𝙱𝚛𝙰𝚗𝚍 𝚃𝚎𝙰𝚖 ](https://t.me/nnnnBn)
-⌯︙[𝚖𝚞𝚛𝚝𝚊𝚍𝚊 𝚖𝚘𝚑𝚊𝚖𝚖𝚎𝚍](https://t.me/VvTVv2)
+#W𝗲𝗹C𝗼M𝗲 T𝗼 S𝗼U𝗿C𝗲 W𝗮𝗮D  .
+⌗︙[KᎥᥲ️N M᥆Hᥲ️MMᥱD . ](https://t.me/uussuu)
+⌗︙[ᥲ️ᎥAꪀ ᥲ️ᥣ AᥣᎥ .](https://t.me/VvTVv2)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '⌯ Source Channel',url="https://t.me/nnnnBn"}},{{text = '⌯ Developer',url="t.me/VvTVv2"},{text = '⌯ Tws YAK',url="https://t.me/nnnnBn"}},{{text= '⌯ Exp Source .',url="https://t.me/nnnnBn"}}}
