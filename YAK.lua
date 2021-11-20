@@ -6286,7 +6286,7 @@ Welcome To Source
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '⌯ Source Channel',url="https://t.me/nnnnBn"}},{{text = '⌯ Developer',url="t.me/VvTVv2"},{text = '⌯ Tws YAK',url="https://t.me/nnnnBn"}},{{text= '⌯ Exp Source .',url="https://t.me/nnnnBn"}}}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/nnnnBn&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/XH4XX3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source YAK     --
@@ -11043,7 +11043,7 @@ if text and (text == "غنيلي" or text == "↫ غنيلي ⌯") and not DevAL
 ALS = math.random(4,2824); 
 local Text ='*⌯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ⌯",callback_data="/Song:"..msg.sender_user_id_}},{{text = '⌯ YAK Team .',url="t.me/nnnnBn"}}} 
+keyboard.inline_keyboard = {{{text="⌗ ⁃ ﭑغـﻧـيه ﭑخࢪىٰ .",callback_data="/Song:"..msg.sender_user_id_}},{{text = '⌗ ⁃ سـوࢪس و؏ــد .',url="t.me/nnnnBn"}}} 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..ALS..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
