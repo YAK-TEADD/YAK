@@ -6284,7 +6284,7 @@ Text = [[
 ᭡︙ [ᥲ️ᎥAꪀ ᥲ️ᥣ AᥣᎥ .](https://t.me/VvTVv2)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '⌗ ⁃ قنـاۿ اࢦـسوࢪس .',url="https://t.me/nnnnBn"}},{{text = '⌗ ⁃ مـطوࢪ اࢦـسوࢪس .',url="t.me/VvTVv2"},{text = '⌗ ⁃ تـواصࢦ اࢦـسوࢪس .',url="https://t.me/nnnnBn"}},{{text = 'اخفاء',callback_data="/HideHelpList:"..msg.sender_user_id_"}}}
+keyboard.inline_keyboard = {{{text = '⌗ ⁃ SoUrCe CHaNNel .',url="https://t.me/nnnnBn"}},{{text = '⌗ ⁃ SoUrCe DeVelOPer .',url="t.me/VvTVv2"},{text = '⌗ ⁃ TwS ⁃ WaaD',url="https://t.me/nnnnBn"}}}
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/OsKaTeAm&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
