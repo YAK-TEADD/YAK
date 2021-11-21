@@ -6105,10 +6105,10 @@ end
 if text == "الرابط" then
 local Link = DevALS:get(YAK..'ALS:Link')
 local Text = [[
-*⌯︙اختر نوع الرابط لجلبه*
+*⌯︙اهلا عزيزي اختر نوع الرابط ليتم جلبه*
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="الرابط نص",callback_data="/LinkText:"..msg.sender_user_id_},{text="الرابط انلاين",callback_data="/Linkinline:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ اࢦـࢪابط نص .",callback_data="/LinkText:"..msg.sender_user_id_},{text="⁃ اࢦـࢪابط انلايـن .",callback_data="/Linkinline:"..msg.sender_user_id_}},{{text="⁃ اخـفاء الڪࢦـيشه .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Link or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
