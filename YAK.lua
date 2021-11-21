@@ -1683,7 +1683,7 @@ EditMsg(Chat_Id2, Msg_Id2, '⌯︙المجموعه بالتاكيد مفعله')
 else
 Text = "⌯︙تم تفعيل المجموعه "..dp.title_
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text="",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 DevALS:sadd(YAK.."ALS:Groups",data.chat_id_)
 if not DevALS:get(YAK..'ALS:SudosGp'..data.sender_user_id_..data.chat_id_) and not SecondSudo(data) then 
@@ -1807,7 +1807,7 @@ DevALS:set(YAK.."Set:Cmd:Group:New1"..msg.chat_id_..":د","طرد")
 DevALS:sadd(YAK.."List:Cmd:Group:New"..msg.chat_id_,"د")
 DevALS:set(YAK.."Set:Cmd:Group:New1"..data.chat_id_..":#","مسح قائمه العام")
 DevALS:sadd(YAK.."List:Cmd:Group:New"..data.chat_id_,"#")
-Text ="*᥀︙تم ترتيب الاوامر بالشكل التالي*\n*᥀︙ايدي - ا .*\n*᥀︙مميز - م .\n᥀︙ادمن - اد .*\n*᥀︙مدير - مد . \n᥀︙منشى - من .*\n*᥀︙المنشئ الاساسي - اس .*\n*᥀︙تعطيل الايدي بالصوره - تعط .*\n*᥀︙تفعيل الايدي بالصوره - تفع .*\n*᥀︙تنزيل الكل - تك .*\n*᥀︙اضف رد - رد .*\n*᥀︙حذف رد - حذ .*\n*᥀︙تثبيت - ت .*\n*᥀︙غنيلي - غ .*\n*᥀︙ ࢪفع مطوࢪ - مط .*\n*᥀︙رفع مطوࢪ ثانوي - ثانوي .*\n*᥀︙اضف امࢪ - امر .*\n*᥀︙مسح سحڪاتي - سح .*\n*᥀︙مسح ࢪسائلي - رس .*\n*᥀︙الࢪابط - ر .*\n*᥀︙ࢪدود المديࢪ - رر .*\n*᥀︙طرد - د .*\n*᥀︙ࢪفع مالك - مالك .*"
+Text = "⌯︙تم ترتيب الاوامر بالشكل التالي ~\n⌯︙ ايدي - ا .\n⌯︙ رفع مميز - م .\n⌯︙رفع ادمن - اد .\n⌯︙ رفع مدير - مد . \n⌯︙ رفع منشى - من . \n⌯︙ رفع منشئ الاساسي - اس  .\n⌯︙ رفع مطور - مط .\n⌯︙رفع مطور ثانوي - ثانوي .\n⌯︙ تنزيل الكل - تك .\n⌯︙ تعطيل الايدي بالصوره - تعط .\n⌯︙ تفعيل الايدي بالصوره - تفع .\n⌯︙ الرابط - ر .\n⌯︙ ردود المدير - رر .\n⌯︙ مسح المكتومين - ،، .\n⌯︙ اضف رد - رد .\n⌯︙ مسح سحكاتي - سح .\n⌯︙ مسح رسائلي - رس .\n⌯︙ غنيلي - غ .\n⌯︙مسح قائمه العام"
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="‹ رجوع ›",callback_data="/Reload:"..data.sender_user_id_}},{{text='‹ TeAm YAK ›',url="t.me/nnnnBn"}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -1817,7 +1817,7 @@ if DataText and DataText:match('/Reload:'..tonumber(data.sender_user_id_)..'(.*)
 local ALS = DataText:match('/Reload:'..tonumber(data.sender_user_id_)..'(.*)')
 Text = "⌯︙تم تفعيل المجموعه"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text="",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --     Source David     -- 
