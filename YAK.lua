@@ -11638,8 +11638,8 @@ end,nil)
 if DevALS:sismember(YAK..'ALS:Groups',msg.chat_id_) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙المجموعه بالتاكيد مفعله', 1, 'md')
 else
-Text = "— — — — — — — — —/n⌯︙تم تفعيل المجموعه "..dp.title_
-local inline = {{{text="⌗ ⁃ ࢪفـ؏ الادمـﻧيه .",callback_data="/UploadAdmin:"..msg.sender_user_id_}},{{text="⌗ ⁃ طࢪد اࢦـبوت .",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="⌗ ⁃ تعطيࢦ اࢦـبوت .",callback_data="/Stop:"..msg.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
+Text = "⌯︙تم تفعيل المجموعه "..dp.title_
+local inline = {{{text="⁃ ࢪفـ؏ الادمـﻧيه .",callback_data="/UploadAdmin:"..msg.sender_user_id_}},{{text="⁃ طࢪد اࢦـبوت .",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="⁃ تعطيࢦ اࢦـبوت .",callback_data="/Stop:"..msg.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 DevALS:sadd(YAK.."ALS:Groups",msg.chat_id_)
 if not DevALS:get(YAK..'ALS:SudosGp'..msg.sender_user_id_..msg.chat_id_) and not SecondSudo(msg) then 
