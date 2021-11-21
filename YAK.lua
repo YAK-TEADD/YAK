@@ -12224,7 +12224,7 @@ DevALS:set(YAK.."ALS:Add:AllText"..msg.sender_user_id_, text)
 DevALS:sadd(YAK.."ALS:Sudo:AllRed",text)
 DevALS:set(YAK.."DelSudoRep",text)
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="• الغاء •",callback_data="/CancelAllRed:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⌗ ⁃ اࢦـغـاء .",callback_data="/CancelAllRed:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
@@ -12294,7 +12294,7 @@ if #redod == 0 then
 MsgRep = '*⌯︙لا توجد ردود مضافه*'
 end
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="مسح ردود المدير",callback_data="/DelGpRed:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ مسـح ࢪدود اࢦـمديࢪ .",callback_data="/DelGpRed:"..msg.sender_user_id_}},{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(MsgRep).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -12354,7 +12354,7 @@ if #redod == 0 then
 MsgRep = '*⌯︙لا توجد ردود مضافه*'
 end
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="مسح ردود المطور",callback_data="/DelGpRedAll:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ مسـح ࢪدود اࢦـمطوࢪ .",callback_data="/DelGpRedAll:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(MsgRep or redod).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -12913,7 +12913,7 @@ local Text = [[
 *⌯︙اليك ازرار مسح الميديا*
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="مسح الميديا",callback_data="/DelMedia:"..msg.sender_user_id_},{text="مسح الاغاني",callback_data="/DelMusic:"..msg.sender_user_id_}},{{text="مسح الرسائل المعدله",callback_data="/DelMsgEdit:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ مسـح اࢦـميديا .",callback_data="/DelMedia:"..msg.sender_user_id_},{text="⁃ مسـح اࢦاغانـي .",callback_data="/DelMusic:"..msg.sender_user_id_}},{{text="⁃ مسـح اࢦـࢪسائل المعدࢦـه .",callback_data="/DelMsgEdit:"..msg.sender_user_id_}},{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Media or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end end
@@ -12935,7 +12935,7 @@ local Text = [[
 *⌯︙اليك ازرار تحديث السورس والملفات*
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="تحديث السورس",callback_data="/UpdateSource:"..msg.sender_user_id_},{text="تحديث الملفات",callback_data="/UpdateFile:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ تحديث اࢦـسوࢪس .",callback_data="/UpdateSource:"..msg.sender_user_id_},{text="⁃ تحديث اࢦملـفات .",callback_data="/UpdateFile:"..msg.sender_user_id_}},{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Source or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
