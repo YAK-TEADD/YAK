@@ -11684,7 +11684,7 @@ if not DevALS:sismember(YAK..'ALS:Groups',msg.chat_id_) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙المجموعه بالتاكيد معطله', 1, 'md')
 else
 Text = "⌯︙تم تعطيل المجموعه "..dp.title_
-local inline = {{{text="‹ غادر ›",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="‹ تفعيل ›",callback_data="/On:"..msg.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
+local inline = {{{text="⁃ طࢪد اࢦـبوت .",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="⁃ تـ؏ـطيࢦ اࢦـبوت .",callback_data="/On:"..msg.sender_user_id_}},{{text="⌗ ⁃ سـوࢪس و؏ــد .",url="t.me/nnnnBn"}}}
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 DevALS:srem(YAK.."ALS:Groups",msg.chat_id_)
 local Name1 = result.first_name_
