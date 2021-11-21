@@ -12146,24 +12146,24 @@ if not Manager(msg) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙للمدير واعلى فقط ', 1, 'md')
 else
 DevALS:set(YAK..'ALS:Add:GpRed'..msg.sender_user_id_..msg.chat_id_,'SetGpRed')
-Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙حسنا ارسل الكلمه الان *" ,  1, *"md")
+Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙حسنا ارسل الكلمه الان " ,  1, "md")
 return false
 end end
 if text and text:match("^(.*)$") then
 local SetGpRed = DevALS:get(YAK..'ALS:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 if SetGpRed == 'SetGpRed' then
 if text == "الغاء" then 
-Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم الغاء الامر*" ,  1, *"md")
+Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم الغاء اضافه الرد" ,  1, "md")
 DevALS:del(YAK..'ALS:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 return false
 end
-Text = "⌯︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n⌯︙يمكنك اضافة الى النص ↫ ⤈\n┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉\n⌯︙للخروج ارسل ↫ ( الغاء )\n ✓"
+Text = "*⌯︙ارسل لي الرد سواء كان ↫ ⤈*\n*❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩*\n*⌯︙يمكنك اضافة الى النص ↫ ⤈*\n*┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉*\n* `#username` ↬ معرف المستخدم*\n* `#msgs` عدد الرسائل*\n* `#name` ↬ اسم المستخدم*\n* `#id` ↬ ايدي المستخدم*\n* `#stast` ↬ رتبة المستخدم*\n* `#edit` ↬ عدد السحكات*\n*┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉*\n*⌯︙للخروج ارسل ↫ ( الغاء )*\n* ✓"
 DevALS:set(YAK..'ALS:Add:GpRed'..msg.sender_user_id_..msg.chat_id_,'SaveGpRed')
 DevALS:set(YAK..'ALS:Add:GpText'..msg.sender_user_id_..msg.chat_id_,text)
 DevALS:sadd(YAK..'ALS:Manager:GpRed'..msg.chat_id_,text)
 DevALS:set(YAK..'DelManagerRep'..msg.chat_id_,text)
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="• الغاء •",callback_data="/CancelRed:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⌗ ⁃ اࢦـغـاء .",callback_data="/CancelRed:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
