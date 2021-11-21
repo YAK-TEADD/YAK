@@ -1683,7 +1683,7 @@ EditMsg(Chat_Id2, Msg_Id2, '⌯︙المجموعه بالتاكيد مفعله')
 else
 Text = "⌯︙تم تفعيل المجموعه "..dp.title_
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 DevALS:sadd(YAK.."ALS:Groups",data.chat_id_)
 if not DevALS:get(YAK..'ALS:SudosGp'..data.sender_user_id_..data.chat_id_) and not SecondSudo(data) then 
