@@ -5985,7 +5985,7 @@ local Text = [[
 ⌯︙من خلال الازرار يمكنك مسح رسائلك وسحكاتك
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="مسح رسائلي",callback_data="/DelMsg:"..msg.sender_user_id_},{text="مسح سحكاتي",callback_data="/DelEdit:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ مـسح رسائلـي .",callback_data="/DelMsg:"..msg.sender_user_id_},{text="⁃ مـسح سحڪاتي .",callback_data="/DelEdit:"..msg.sender_user_id_}},{{text="⁃ اخـفاء الڪليشه .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Msg or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -6018,7 +6018,7 @@ return false
 end
 local Text = '⌯︙قم باستعمال الازرار للتحكم العضو ↫ ⤈\n⌯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'nnnnBn')..')'
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="رفع رتبه",callback_data=msg.sender_user_id_..":SetList:"..result.sender_user_id_},{text="تنزيل رتبه",callback_data=msg.sender_user_id_..":RemList:"..result.sender_user_id_}},{{text="كتم",callback_data=msg.sender_user_id_..":Mute:"..result.sender_user_id_},{text="الغاء كتم",callback_data=msg.sender_user_id_..":UnMute:"..result.sender_user_id_}},{{text="حظر",callback_data=msg.sender_user_id_..":Ban:"..result.sender_user_id_},{text="الغاء حظر",callback_data=msg.sender_user_id_..":UnBan:"..result.sender_user_id_}},{{text="تقيد",callback_data=msg.sender_user_id_..":Tkeed:"..result.sender_user_id_},{text="الغاء تقيد",callback_data=msg.sender_user_id_..":UnTkeed:"..result.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ ࢪفـ؏ ࢪتبه .",callback_data=msg.sender_user_id_..":SetList:"..result.sender_user_id_},{text="⁃ تنزيࢦ ࢪتبه .",callback_data=msg.sender_user_id_..":RemList:"..result.sender_user_id_}},{{text="⁃ ڪتم .",callback_data=msg.sender_user_id_..":Mute:"..result.sender_user_id_},{text="⁃ الغاء ڪتم .",callback_data=msg.sender_user_id_..":UnMute:"..result.sender_user_id_}},{{text="⁃ حظࢪ .",callback_data=msg.sender_user_id_..":Ban:"..result.sender_user_id_},{text="⁃ الغاء حظࢪ .",callback_data=msg.sender_user_id_..":UnBan:"..result.sender_user_id_}},{{text="⁃ تقيد .",callback_data=msg.sender_user_id_..":Tkeed:"..result.sender_user_id_},{text="⁃ الغاء تقيد .",callback_data=msg.sender_user_id_..":UnTkeed:"..result.sender_user_id_}},{{text="اخفاء الكليشه",callback_data=msg.sender_user_id_..":SetList:"..result.sender_user_id_},{text="السورس",callback_data=msg.sender_user_id_..":RemList:"..result.sender_user_id_}}
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text='..URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
