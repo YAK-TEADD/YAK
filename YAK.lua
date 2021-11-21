@@ -1683,7 +1683,7 @@ EditMsg(Chat_Id2, Msg_Id2, '⌯︙المجموعه بالتاكيد مفعله')
 else
 Text = "⌯︙تم تفعيل المجموعه "..dp.title_
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text="⁃ ࢪفـ؏ الادمـﻧـيه .",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="⁃ طـࢪد اࢦـبوت .",callback_data="/LeaveBot:"..data.sender_user_id_},{text="⁃ تـ؏ـطيࢦ اࢦـبوت .",callback_data="/Stop:"..data.sender_user_id_}},{{text="⌗ ⁃ سـوࢪس و؏ــد .",url="t.me/nnnnBn"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 DevALS:sadd(YAK.."ALS:Groups",data.chat_id_)
 if not DevALS:get(YAK..'ALS:SudosGp'..data.sender_user_id_..data.chat_id_) and not SecondSudo(data) then 
@@ -1730,7 +1730,7 @@ EditMsg(Chat_Id2, Msg_Id2, "⌯︙المجموعه بالتاكيد معطله")
 else
 Text = "⌯︙تم تعطيل المجموعه "..dp.title_
 keyboard = {}
-keyboard.inline_keyboard = {{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تفعيل ›",callback_data="/On:"..data.sender_user_id_}},{{text="‹ TeAm YAK ›",url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text="⁃ طـࢪد اࢦـبوت .",callback_data="/LeaveBot:"..data.sender_user_id_},{text="⁃ تفـ؏ـيࢦ اࢦـبوت .",callback_data="/On:"..data.sender_user_id_}},{{text="⌗ ⁃ سـوࢪس و؏ــد .",url="t.me/nnnnBn"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 DevALS:srem(YAK.."ALS:Groups",data.chat_id_)
 local Name1 = result.first_name_
@@ -1809,7 +1809,7 @@ DevALS:set(YAK.."Set:Cmd:Group:New1"..data.chat_id_..":#","مسح قائمه ا�
 DevALS:sadd(YAK.."List:Cmd:Group:New"..data.chat_id_,"#")
 Text = "⌯︙تم ترتيب الاوامر بالشكل التالي ~\n⌯︙ ايدي - ا .\n⌯︙ رفع مميز - م .\n⌯︙رفع ادمن - اد .\n⌯︙ رفع مدير - مد . \n⌯︙ رفع منشى - من . \n⌯︙ رفع منشئ الاساسي - اس  .\n⌯︙ رفع مطور - مط .\n⌯︙رفع مطور ثانوي - ثانوي .\n⌯︙ تنزيل الكل - تك .\n⌯︙ تعطيل الايدي بالصوره - تعط .\n⌯︙ تفعيل الايدي بالصوره - تفع .\n⌯︙ الرابط - ر .\n⌯︙ ردود المدير - رر .\n⌯︙ مسح المكتومين - ،، .\n⌯︙ اضف رد - رد .\n⌯︙ مسح سحكاتي - سح .\n⌯︙ مسح رسائلي - رس .\n⌯︙ غنيلي - غ .\n⌯︙مسح قائمه العام"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="‹ رجوع ›",callback_data="/Reload:"..data.sender_user_id_}},{{text='‹ TeAm YAK ›',url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text="⁃ ࢪجـو؏ .",callback_data="/Reload:"..data.sender_user_id_}},{{text='⌗ ⁃ سـوࢪس و؏ــد .',url="t.me/nnnnBn"}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --     Source David     --
@@ -1861,7 +1861,7 @@ DevALS:del(YAK.."ALS:Add:AllRed"..data.sender_user_id_)
 DevALS:del(YAK.."DelSudoRep")
 Text = "⌯︙تم الغاء حفظ الرد"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '⌯ TeAm YAK .',url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text = '⌗ ⁃ سـوࢪس و؏ــد .',url="t.me/nnnnBn"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
@@ -1874,7 +1874,7 @@ DevALS:del(YAK..'ALS:Add:GpRed'..data.sender_user_id_..data.chat_id_)
 DevALS:del(YAK..'DelManagerRep'..data.chat_id_)
 Text = "⌯︙تم الغاء حفظ الرد"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '⌯ TeAm YAK .',url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text = '⌗ ⁃ سـوࢪس و؏ــد .',url="t.me/nnnnBn"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
@@ -1887,7 +1887,7 @@ local Text = [[
 *⌯︙من خلال الازرار يمكنك التحكم بأوامر المجموعه*
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="ترتيب الاوامر",callback_data="/SetCmd:"..data.sender_user_id_},{text="مسح الاوامر المضافه",callback_data="/DelCmd:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ مـسح الاوامࢪ المـضافه .",callback_data="/DelCmd:"..data.sender_user_id_}},{{text="⁃ اخـفاء الڪليشه .",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Cmd or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
 --     Source YAK     --
@@ -1899,7 +1899,7 @@ local Text = [[
 *⌯︙من خلال الازرار يمكنك مسح رسائلك وسحكاتك*
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="مسح رسائلي",callback_data="/DelMsg:"..data.sender_user_id_},{text="مسح سحكاتي",callback_data="/DelEdit:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ مـسح رسائلـي .",callback_data="/DelMsg:"..data.sender_user_id_},{text="⁃ مـسح سحڪاتي .",callback_data="/DelEdit:"..data.sender_user_id_}},{{text="⁃ اخـفاء الڪليشه .",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Msg or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
 --     Source YAK     --
@@ -1908,7 +1908,7 @@ local ALS = DataText:match('/DelEdit:'..tonumber(data.sender_user_id_)..'(.*)')
 DevALS:del(YAK..'ALS:EditMsg'..data.chat_id_..data.sender_user_id_)
 Text = "*⌯︙تم حذف جميع تعديلاتك بنجاح*"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="‹ رجوع ›",callback_data="/DelHome:"..data.sender_user_id_}},{{text="‹ اخفاء الكليشه ›",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ ࢪجـو؏ .",callback_data="/DelHome:"..data.sender_user_id_}},{{text="⁃ اخـفاء الڪليشه .",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 --     Source YAK     --
@@ -1917,7 +1917,7 @@ local ALS = DataText:match('/DelMsg:'..tonumber(data.sender_user_id_)..'(.*)')
 DevALS:del(YAK..'ALS:UsersMsgs'..data.chat_id_..':'..data.sender_user_id_)
 Text = "*⌯︙تم حذف جميع رسائلك بنجاح*"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="• رجوع •",callback_data="/DelHome:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ ࢪجـو؏ .",callback_data="/DelHome:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --     Source YAK     --
@@ -11684,7 +11684,7 @@ if not DevALS:sismember(YAK..'ALS:Groups',msg.chat_id_) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙المجموعه بالتاكيد معطله', 1, 'md')
 else
 Text = "⌯︙تم تعطيل المجموعه "..dp.title_
-local inline = {{{text="⁃ طࢪد اࢦـبوت .",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="⁃ تـ؏ـطيࢦ اࢦـبوت .",callback_data="/On:"..msg.sender_user_id_}},{{text="⌗ ⁃ سـوࢪس و؏ــد .",url="t.me/nnnnBn"}}}
+local inline = {{{text="⁃ طࢪد اࢦـبوت .",callback_data="/LeaveBot:"..msg.sender_user_id_},{text="⁃ تفـ؏ـيࢦ اࢦـبوت .",callback_data="/On:"..msg.sender_user_id_}},{{text="⌗ ⁃ سـوࢪس و؏ــد .",url="t.me/nnnnBn"}}}
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 DevALS:srem(YAK.."ALS:Groups",msg.chat_id_)
 local Name1 = result.first_name_
