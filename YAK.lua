@@ -12146,14 +12146,14 @@ if not Manager(msg) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙للمدير واعلى فقط ', 1, 'md')
 else
 DevALS:set(YAK..'ALS:Add:GpRed'..msg.sender_user_id_..msg.chat_id_,'SetGpRed')
-Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙حسنا ارسل الكلمه الان " ,  1, "md")
+Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙حسنا ارسل الكلمه الان *" ,  1, *"md")
 return false
 end end
 if text and text:match("^(.*)$") then
 local SetGpRed = DevALS:get(YAK..'ALS:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 if SetGpRed == 'SetGpRed' then
 if text == "الغاء" then 
-Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم الغاء الامر" ,  1, "md")
+Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم الغاء الامر*" ,  1, *"md")
 DevALS:del(YAK..'ALS:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 return false
 end
