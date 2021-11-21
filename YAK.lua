@@ -2262,7 +2262,7 @@ Text =[[
 *⌯︙قائمه الالعاب المتطوره اضغط للعب*
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="♟ الشطرنج ♟",url='https://t.me/T4TTTTBOT?game=chess'}},{{text="لعبة فلابي بيرد 🐥",url='https://t.me/awesomebot?game=FlappyBird'},{text="تحدي الرياضيات",url='https://t.me/gamebot?game=MathBattle'}},{{text="اكس او",url='t.me/xobot?start'},{text="سباق الدراجات 🏍",url='https://t.me/gamee?game=MotoFX'}},{{text="سباق سيارات 🏎",url='https://t.me/gamee?game=F1Racer'},{text="متشابه 👾",url='https://t.me/gamee?game=DiamondRows'}},{{text="كرة قدم ⚽",url='https://t.me/gamee?game=FootballStar'}},{{text="ورق🤹‍♂",url='https://t.me/gamee?game=Hexonix'},{text="Hexonix❌",url='https://t.me/gamee?game=Hexonix'}},{{text="MotoFx🏍️",url='https://t.me/gamee?game=MotoFx'}},{{text="لعبة 2048 🎰",url='https://t.me/awesomebot?game=g2048'},{text="Squares🏁",url='https://t.me/gamee?game=Squares'}},{{text="Atomic 1▶️",url='https://t.me/gamee?game=AtomicDrop1'},{text="Corsairs",url='https://t.me/gamebot?game=Corsairs'}},{{text="LumberJack",url='https://t.me/gamebot?game=LumberJack'}},{{text="LittlePlane",url='https://t.me/gamee?game=LittlePlane'},{text="RollerDisco",url='https://t.me/gamee?game=RollerDisco'}},{{text="🦖 لعبة التنين 🦖",url='https://t.me/T4TTTTBOT?game=dragon'},{text="🐍 لعبة الافعى 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},{{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},{{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},{{text="لعبة النينجا",url='https://t.me/gamee?game=GravityNinja21'},{text="لعبة الكرتي",url='https://t.me/gamee?game=KarateKid2'}},{{text = '⌯ TeAm YAK .', url="t.me/nnnnBn"}}}
+keyboard.inline_keyboard = {{{text="♟ الشطرنج ♟",url='https://t.me/T4TTTTBOT?game=chess'}},{{text="لعبة فلابي بيرد 🐥",url='https://t.me/awesomebot?game=FlappyBird'},{text="تحدي الرياضيات",url='https://t.me/gamebot?game=MathBattle'}},{{text="اكس او",url='t.me/xobot?start'},{text="سباق الدراجات 🏍",url='https://t.me/gamee?game=MotoFX'}},{{text="سباق سيارات 🏎",url='https://t.me/gamee?game=F1Racer'},{text="متشابه 👾",url='https://t.me/gamee?game=DiamondRows'}},{{text="كرة قدم ⚽",url='https://t.me/gamee?game=FootballStar'}},{{text="ورق🤹‍♂",url='https://t.me/gamee?game=Hexonix'},{text="Hexonix❌",url='https://t.me/gamee?game=Hexonix'}},{{text="MotoFx🏍️",url='https://t.me/gamee?game=MotoFx'}},{{text="لعبة 2048 🎰",url='https://t.me/awesomebot?game=g2048'},{text="Squares🏁",url='https://t.me/gamee?game=Squares'}},{{text="Atomic 1▶️",url='https://t.me/gamee?game=AtomicDrop1'},{text="Corsairs",url='https://t.me/gamebot?game=Corsairs'}},{{text="LumberJack",url='https://t.me/gamebot?game=LumberJack'}},{{text="LittlePlane",url='https://t.me/gamee?game=LittlePlane'},{text="RollerDisco",url='https://t.me/gamee?game=RollerDisco'}},{{text="🦖 لعبة التنين 🦖",url='https://t.me/T4TTTTBOT?game=dragon'},{text="🐍 لعبة الافعى 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},{{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},{{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},{{text="لعبة النينجا",url='https://t.me/gamee?game=GravityNinja21'},{text="لعبة الكرتي",url='https://t.me/gamee?game=KarateKid2'}},{{text = '⌗ ⁃ سـوࢪس و؏ــد .', url="t.me/nnnnBn"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end end
@@ -2275,7 +2275,7 @@ local Text = [[
 *⌯︙اليك ازرار تحديث السورس والملفات*
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="تحديث السورس",callback_data="/UpdateSource:"..data.sender_user_id_},{text="تحديث الملفات",callback_data="/UpdateFile:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ تحديث اࢦـسوࢪس .",callback_data="/UpdateSource:"..data.sender_user_id_},{text="⁃ تحديث اࢦملـفات .",callback_data="/UpdateFile:"..data.sender_user_id_}},{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
@@ -2289,7 +2289,7 @@ io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
 Text = "*⌯︙تم تحديث السورس*"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/SourceList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/SourceList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if DataText and DataText:match('/UpdateFile:'..tonumber(data.sender_user_id_)..'(.*)') then
@@ -2299,7 +2299,7 @@ io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n        ( تم تحديث ملفات البوت )        \n\27[0;34;49m\n") 
 Text = "*⌯︙تم تحديث الملفات*"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/SourceList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/SourceList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 --     Source YAK     -- 
@@ -2308,10 +2308,10 @@ local ALS = DataText:match('/MediaHome:(.*)')
 if tonumber(ALS) == tonumber(data.sender_user_id_) then
 local Media = DevALS:get(YAK..'ALS:Media')
 local Text = [[
-*⌯︙اليك ازرار مسح الميديا*
+*⌯︙هلا عمري اليك ازرار مسح الميديا*
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="مسح الميديا",callback_data="/DelMedia:"..data.sender_user_id_},{text="مسح الاغاني",callback_data="/DelMusic:"..data.sender_user_id_}},{{text="مسح الرسائل المعدله",callback_data="/DelMsgEdit:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ مسـح اࢦـميديا .",callback_data="/DelMedia:"..data.sender_user_id_},{text="⁃ مسـح اࢦاغانـي .",callback_data="/DelMusic:"..data.sender_user_id_}},{{text="⁃ مسـح اࢦـࢪسائل المعدࢦـه .",callback_data="/DelMsgEdit:"..data.sender_user_id_}},{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
@@ -2332,7 +2332,7 @@ DevALS:del(YAK.."ALS:cleaner"..data.chat_id_)
 else
 Text = "*⌯︙لا توجد ميديا هنا*"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/MediaHome:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..data.sender_user_id_},{text="⁃ ࢪجـو؏ .",callback_data="/MediaHome:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
 if DataText and DataText:match('/DelMusic:'..tonumber(data.sender_user_id_)..'(.*)') then
@@ -2350,7 +2350,7 @@ DevALS:del(YAK.."ALS:cleanermusic"..data.chat_id_)
 else
 Text = "*⌯︙لا توجد اغاني هنا*"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/MediaHome:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..data.sender_user_id_},{text="⁃ ࢪجـو؏ .",callback_data="/MediaHome:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end end
 if DataText and DataText:match('/DelMsgEdit:'..tonumber(data.sender_user_id_)..'(.*)') then
@@ -2374,7 +2374,7 @@ DeleteMessage(data.chat_id_,ALS_Del2)
 end,nil)  
 Text = "*⌯︙تم تنظيف الرسائل المعدله*"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/MediaHome:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="⁃ اخـفاء اࢦـڪࢦـيشه  .",callback_data="/HideHelpList:"..data.sender_user_id_},{text="⁃ ࢪجـو؏ .",callback_data="/MediaHome:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --     Source YAK     -- 
@@ -2646,15 +2646,15 @@ local ALS = DataText:match('/HelpList:(.*)')
 if tonumber(ALS) == tonumber(data.sender_user_id_) then
 local Help = DevALS:get(YAK..'ALS:Help')
 local Text = [[
-⌯︙اهلا بك في قائمة الاوامر ↫ ⤈ 
-┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉
-⌯︙م1 ↫ اوامر الحمايه
-⌯︙م2 ↫ اوامر الادمنيه
-⌯︙م3 ↫ اوامر المدراء
-⌯︙م4 ↫ اوامر المنشئين
-⌯︙م5 ↫ اوامر المطورين
-⌯︙م6 ↫ اوامر الاعضاء
-┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉
+*⌯︙اهلا بك في قائمة الاوامر* 
+*┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉*
+*⌯︙م1 ← اوامر الحمايه*
+*⌯︙م2 ← اوامر الادمنيه*
+*⌯︙م3 ← اوامر المدراء*
+*⌯︙م4 ← اوامر المنشئين*
+*⌯︙م5 ← اوامر المطورين*
+*⌯︙م6 ← اوامر الاعضاء*
+*┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉*
 ⌯︙[Source Channel](https://t.me/nnnnBn)
 ]] 
 keyboard = {} 
