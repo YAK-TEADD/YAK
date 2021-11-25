@@ -6789,7 +6789,7 @@ if Sudo(msg) then
 if text ==('اضف مطور ثنائي') or text ==('رفع مطور ثنائي') and ChCheck(msg) then
 function sudo_reply(extra, result, success)
 DevALS:sadd(YAK..'ALS:ALSSudo:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه في قائمة المطورين الثنائيين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين اࢦثنائين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -6800,7 +6800,7 @@ local username = text:match('^اضف مطور ثنائي @(.*)') or text:match('
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:sadd(YAK..'ALS:ALSSudo:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه في قائمة المطورين الثنائيين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين اࢦثنائين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -6809,14 +6809,14 @@ end
 if text and (text:match('^اضف مطور ثنائي (%d+)') or text:match('^رفع مطور ثنائي (%d+)')) and ChCheck(msg) then
 local user = text:match('اضف مطور ثنائي (%d+)') or text:match('رفع مطور ثنائي (%d+)')
 DevALS:sadd(YAK..'ALS:ALSSudo:',user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه في قائمة المطورين الثنائيين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين اࢦثنائين")  
 end
 --     Source YAK     --
 --     Rem SecondSudo     --
 if text ==('حذف مطور ثنائي') or text ==('تنزيل مطور ثنائي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevALS:srem(YAK..'ALS:ALSSudo:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم تنزيله من قائمة المطورين الثنائيين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم حـبيبي نزلته الك من قائمه اࢦـمطوࢪين اࢦثنائين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
@@ -6827,7 +6827,7 @@ local username = text:match('^حذف مطور ثنائي @(.*)') or text:match('
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:srem(YAK..'ALS:ALSSudo:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من قائمة المطورين الثنائيين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم حـبيبي نزلته الك من قائمه اࢦـمطوࢪين اࢦثنائين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -6836,7 +6836,7 @@ end
 if text and (text:match('^حذف مطور ثنائي (%d+)') or text:match('^تنزيل مطور ثنائي (%d+)')) and ChCheck(msg) then
 local user = text:match('حذف مطور ثنائي (%d+)') or text:match('تنزيل مطور ثنائي (%d+)')
 DevALS:srem(YAK..'ALS:ALSSudo:',user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من قائمة المطورين الثنائيين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم حـبيبي نزلته الك من قائمه اࢦـمطوࢪين اࢦثنائين")  
 end end
 --     Source YAK     --
 --     Set SecondSudo     --
@@ -6849,12 +6849,20 @@ end
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
 end end 
+if text ==('اضف مطور ثانوي') or text ==('رفع مطور ثانوي') and ChCheck(msg) then
+function sudo_reply(extra, result, success)
+DevALS:sadd(YAK..'ALS:SecondSudo:',result.sender_user_id_)
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين اࢦثانوين")  
+end 
+if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
+end end 
 if text and (text:match('^اضف مطور ثانوي @(.*)') or text:match('^رفع مطور ثانوي @(.*)')) and ChCheck(msg) then
 local username = text:match('^اضف مطور ثانوي @(.*)') or text:match('^رفع مطور ثانوي @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:sadd(YAK..'ALS:SecondSudo:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه في قائمة المطورين الثانويين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين اࢦثانوين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -6863,14 +6871,14 @@ end
 if text and (text:match('^اضف مطور ثانوي (%d+)') or text:match('^رفع مطور ثانوي (%d+)')) and ChCheck(msg) then
 local user = text:match('اضف مطور ثانوي (%d+)') or text:match('رفع مطور ثانوي (%d+)')
 DevALS:sadd(YAK..'ALS:SecondSudo:',user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه في قائمة المطورين الثانويين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين اࢦثانوين")  
 end
 --     Source YAK     --
 --     Rem SecondSudo     --
 if text ==('حذف مطور ثانوي') or text ==('تنزيل مطور ثانوي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevALS:srem(YAK..'ALS:SecondSudo:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم تنزيله من قائمة المطورين الثانويين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم يبـ؏ـدي نزلته الك من قائمه المطوࢪين اࢦـثانويين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -6880,7 +6888,7 @@ local username = text:match('^حذف مطور ثانوي @(.*)') or text:match('
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:srem(YAK..'ALS:SecondSudo:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من قائمة المطورين الثانويين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يبـ؏ـدي نزلته الك من قائمه المطوࢪين اࢦـثانويين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -6889,7 +6897,7 @@ end
 if text and (text:match('^حذف مطور ثانوي (%d+)') or text:match('^تنزيل مطور ثانوي (%d+)')) and ChCheck(msg) then
 local user = text:match('حذف مطور ثانوي (%d+)') or text:match('تنزيل مطور ثانوي (%d+)')
 DevALS:srem(YAK..'ALS:SecondSudo:',user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من قائمة المطورين الثانويين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يبـ؏ـدي نزلته الك من قائمه المطوࢪين اࢦـثانويين")  
 end end
 --     Source YAK     --
 --       Set SudoBot      --
@@ -6897,7 +6905,7 @@ if SecondSudo(msg) then
 if text ==('اضف مطور') or text ==('رفع مطور') and ChCheck(msg) then
 function sudo_reply(extra, result, success)
 DevALS:sadd(YAK..'ALS:SudoBot:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه في قائمة المطورين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
@@ -6907,7 +6915,7 @@ local username = text:match('^اضف مطور @(.*)') or text:match('^رفع م�
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:sadd(YAK..'ALS:SudoBot:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه في قائمة المطورين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -6916,7 +6924,7 @@ end
 if text and (text:match('^اضف مطور (%d+)') or text:match('^رفع مطور (%d+)')) and ChCheck(msg) then
 local user = text:match('اضف مطور (%d+)') or text:match('رفع مطور (%d+)')
 DevALS:sadd(YAK..'ALS:SudoBot:',user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه في قائمة المطورين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم حـبيبي ࢪفعته الك بـ قائمه اࢦـمطوࢪين")  
 end
 --     Source YAK     --
 --       Rem SudoBot      --
@@ -6933,7 +6941,7 @@ local username = text:match('^حذف مطور @(.*)') or text:match('^تنزيل
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:srem(YAK..'ALS:SudoBot:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من قائمة المطورين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يـڪࢦبي نزلته الك من قائمه اࢦـمطوࢪين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -6942,7 +6950,7 @@ end
 if text and (text:match('^حذف مطور (%d+)') or text:match('^تنزيل مطور (%d+)')) and ChCheck(msg) then
 local user = text:match('حذف مطور (%d+)') or text:match('تنزيل مطور (%d+)')
 DevALS:srem(YAK..'ALS:SudoBot:',user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من قائمة المطورين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يـڪࢦبي نزلته الك من قائمه اࢦـمطوࢪين")  
 end end
 --     Source YAK     --
 --   Set ALSConstructor   --
@@ -6951,7 +6959,7 @@ if SudoBot(msg) then
 if text ==('رفع مالك') and ChCheck(msg) then
 function raf_reply(extra, result, success)
 DevALS:sadd(YAK..'ALS:Owner:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه مالك")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم يبـ؏ـدي ࢪفعته الك بـ قائمه اࢦـمالڪين ")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
@@ -6961,7 +6969,7 @@ local username = text:match('^رفع مالك @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:sadd(YAK..'ALS:Owner:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه مالك")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يبـ؏ـدي ࢪفعته الك بـ قائمه اࢦـمالڪين ")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -6970,7 +6978,7 @@ end
 if text and text:match('^رفع مالك (%d+)') and ChCheck(msg) then
 local user = text:match('رفع مالك (%d+)')
 DevALS:sadd(YAK..'ALS:Owner:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه مالك")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يبـ؏ـدي ࢪفعته الك بـ قائمه اࢦـمالڪين ")  
 end
 --     Source YAK     --
 --   Rem ALSConstructor   --
@@ -6984,7 +6992,7 @@ if tonumber(result.sender_user_id_) == tonumber(admins[i].user_id_) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙لا يمكن تنزيل المالك الاساسي', 1, 'md')
 else
 DevALS:srem(YAK..'ALS:Owner:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم تنزيله من المالكين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم يࢪوحـي نزلته الك من قائمه اࢦـمالڪين")  
 end end end
 end,nil)
 end 
@@ -7004,7 +7012,7 @@ if tonumber(result.id_) == tonumber(admins[i].user_id_) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙لا يمكن تنزيل المالك الاساسي', 1, 'md')
 else
 DevALS:srem(YAK..'ALS:Owner:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من المالكين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يࢪوحـي نزلته الك من قائمه اࢦـمالڪين")  
 end end end
 end,nil)
 else 
@@ -7022,7 +7030,7 @@ if tonumber(user) == tonumber(admins[i].user_id_) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙لا يمكن تنزيل المالك الاساسي', 1, 'md')
 else
 DevALS:srem(YAK..'ALS:Owner:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من المالكين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يࢪوحـي نزلته الك من قائمه اࢦـمالڪين")  
 end end end
 end,nil)
 end end
@@ -7036,7 +7044,7 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:BasicConstructor:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه منشئ اساسي")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم يـڪࢦبي ࢪفعته الك بـ قائمه اࢦـمنشئيين الاساسيين ")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
@@ -7050,7 +7058,7 @@ return false
 end
 if result.id_ then
 DevALS:sadd(YAK..'ALS:BasicConstructor:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه منشئ اساسي")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يـڪࢦبي ࢪفعته الك بـ قائمه اࢦـمنشئيين الاساسيين ")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7063,14 +7071,14 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:BasicConstructor:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه منشئ اساسي")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يـڪࢦبي ࢪفعته الك بـ قائمه اࢦـمنشئيين الاساسيين ")  
 end
 --     Source YAK     --
 --  Rem BasicConstructor  --
 if text ==('تنزيل منشئ اساسي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevALS:srem(YAK..'ALS:BasicConstructor:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم تنزيله منشئ اساسي")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم ڪࢦـبي نزلته الك من قائمه اࢦـمنشئين الاساسين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -7080,7 +7088,7 @@ local username = text:match('^تنزيل منشئ اساسي @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:srem(YAK..'ALS:BasicConstructor:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله منشئ اساسي")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم ڪࢦـبي نزلته الك من قائمه اࢦـمنشئين الاساسين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7089,7 +7097,7 @@ end
 if text and text:match('^تنزيل منشئ اساسي (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل منشئ اساسي (%d+)')
 DevALS:srem(YAK..'ALS:BasicConstructor:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله منشئ اساسي")  
+ReplyStatus(msg,user,"Reply","⌯︙تم ڪࢦـبي نزلته الك من قائمه اࢦـمنشئين الاساسين")  
 end end
 if text ==('رفع منشئ اساسي') and not Owner(msg) then
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙هذا الامر للمالكين والمطورين فقط', 1, 'md')
@@ -7104,7 +7112,7 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:Constructor:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه في قائمة المنشئين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم يبـ؏ـدي ࢪفعته الك بـ قائمه اࢦـمنشئيين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
@@ -7118,7 +7126,7 @@ return false
 end
 if result.id_ then
 DevALS:sadd(YAK..'ALS:Constructor:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه في قائمة المنشئين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يبـ؏ـدي ࢪفعته الك بـ قائمه اࢦـمنشئيين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7131,7 +7139,7 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:Constructor:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه في قائمة المنشئين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يبـ؏ـدي ࢪفعته الك بـ قائمه اࢦـمنشئيين")  
 end
 --     Source YAK     --
 --    Rem  Constructor    --
@@ -7148,7 +7156,7 @@ local username = text:match('^تنزيل منشئ @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:srem(YAK..'ALS:Constructor:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من قائمة المنشئين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يبـ؏ـدي نزلته الك من قائمه اࢦـمنشئين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7157,7 +7165,7 @@ end
 if text and text:match('^تنزيل منشئ (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل منشئ (%d+)')
 DevALS:srem(YAK..'ALS:Constructor:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من قائمة المنشئين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يبـ؏ـدي نزلته الك من قائمه اࢦـمنشئين")  
 end 
 end
 --     Source YAK     --
@@ -7170,7 +7178,7 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:Managers:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه في قائمة المدراء")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم حياتـي ࢪفعته الك بـ قائمه المدࢪاء")  
 end  
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -7184,7 +7192,7 @@ return false
 end
 if result.id_ then
 DevALS:sadd(YAK..'ALS:Managers:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه في قائمة المدراء")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم حياتـي ࢪفعته الك بـ قائمه المدࢪاء")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7197,14 +7205,14 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:Managers:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه في قائمة المدراء")  
+ReplyStatus(msg,user,"Reply","⌯︙تم حياتـي ࢪفعته الك بـ قائمه المدࢪاء")  
 end
 --     Source YAK     --
 --       Rem Manager      --
 if text ==('تنزيل مدير') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevALS:srem(YAK..'ALS:Managers:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم تنزيله من قائمة المدراء")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم يࢪوحـي نزلته الك من قائمه اࢦـمدࢪاء")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -7214,7 +7222,7 @@ local username = text:match('^تنزيل مدير @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:srem(YAK..'ALS:Managers:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من قائمة المدراء")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يࢪوحـي نزلته الك من قائمه اࢦـمدࢪاء")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7223,8 +7231,8 @@ end
 if text and text:match('^تنزيل مدير (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل مدير (%d+)')
 DevALS:srem(YAK..'ALS:Managers:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من قائمة المدراء")  
-end 
+ReplyStatus(msg,user,"Reply","⌯︙تم يࢪوحـي نزلته الك من قائمه اࢦـمدࢪاء")  
+end
 --     Source YAK     --
 --       Set Cleaner      --
 if text ==('رفع منظف') and ChCheck(msg) then
@@ -7234,7 +7242,7 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:Cleaner:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه في قائمة المنظفين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم ؏ـمري ࢪفعته الك بـ قائمه اࢦـمنظفين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -7248,7 +7256,7 @@ return false
 end
 if result.id_ then
 DevALS:sadd(YAK..'ALS:Cleaner:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه في قائمة المنظفين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم ؏ـمري ࢪفعته الك بـ قائمه اࢦـمنظفين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7261,14 +7269,14 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:Cleaner:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه في قائمة المنظفين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم ؏ـمري ࢪفعته الك بـ قائمه اࢦـمنظفين")  
 end
 --     Source YAK     --
 --       Rem Cleaner      --
 if text ==('تنزيل منظف') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevALS:srem(YAK..'ALS:Cleaner:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم تنزيله من قائمة المنظفين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم يڪࢦـبي نزلته الك من قائمه اࢦـمنظفين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -7278,7 +7286,7 @@ local username = text:match('^تنزيل منظف @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:srem(YAK..'ALS:Cleaner:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من قائمة المنظفين")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يڪࢦـبي نزلته الك من قائمه اࢦـمنظفين")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7287,7 +7295,7 @@ end
 if text and text:match('^تنزيل منظف (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل منظف (%d+)')
 DevALS:srem(YAK..'ALS:Cleaner:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من قائمة المنظفين")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يڪࢦـبي نزلته الك من قائمه اࢦـمنظفين")  
 end end
 --     Source YAK     --
 --       Set admin        --
@@ -7299,7 +7307,7 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:Admins:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم رفعه في قائمة الادمنيه")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم يࢪوحي ࢪفعته الك بـ قائمه اࢦادمنيهه")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -7313,7 +7321,7 @@ return false
 end
 if result.id_ then
 DevALS:sadd(YAK..'ALS:Admins:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم رفعه في قائمة الادمنيه")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم يࢪوحي ࢪفعته الك بـ قائمه اࢦادمنيه")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7326,14 +7334,14 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:Admins:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم رفعه في قائمة الادمنيه")  
+ReplyStatus(msg,user,"Reply","⌯︙تم يࢪوحي ࢪفعته الك بـ قائمه اࢦادمنيه")  
 end
 --     Source YAK     --
 --        Rem admin       --
 if text ==('تنزيل ادمن') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevALS:srem(YAK..'ALS:Admins:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم تنزيله من قائمة الادمنيه")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم حـبيبي نزلته الك من قائمه اࢦادمنيهه")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -7343,7 +7351,7 @@ local username = text:match('^تنزيل ادمن @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevALS:srem(YAK..'ALS:Admins:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم تنزيله من قائمة الادمنيه")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙تم حـبيبي نزلته الك من قائمه اࢦادمنيهه")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7352,7 +7360,7 @@ end
 if text and text:match('^تنزيل ادمن (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل ادمن (%d+)')
 DevALS:srem(YAK..'ALS:Admins:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم تنزيله من قائمة الادمنيه")  
+ReplyStatus(msg,user,"Reply","⌯︙تم حـبيبي نزلته الك من قائمه اࢦادمنيهه")  
 end end
 --     Source YAK     --
 --       Set Vipmem       --
