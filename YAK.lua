@@ -7593,7 +7593,7 @@ send(msg.chat_id_,msg.id_,"⌯︙ه‍ـلا ڪࢦـبي للاسف ماعدي �
 return false  
 end
 if dp and dp.code_ and dp.code_ == 400 and dp.message_ == "USER_ADMIN_INVALID" then 
-send(msg.chat_id_,msg.id_,"⌯︙ه‍ـلا ؏ـﻤري للاسف مايمديني احظࢪ او اطࢪد مشࢪفـين الـقࢪوب !") 
+send(msg.chat_id_,msg.id_,"⌯︙*ه‍ـلا ؏ـﻤري للاسف مايمديني احظࢪ او اطࢪد مشࢪفـين الـقࢪوب !*") 
 return false  
 end
 ChatKick(result.chat_id_, result.sender_user_id_)
