@@ -5322,6 +5322,49 @@ name = math.random(#namebot)
 Dev_ALS(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'html') 
 return false 
 end
+if text == 'حلها' and ChCheck(msg) or text == 'حليها' and ChCheck(msg) or text == '← معاني ⌯' and ChCheck(msg) then
+if not DevALS:get(YAK..'ALS:Lock:Games'..msg.chat_id_) then
+DevALS2 = {'قرد','دجاجه','بطريق','ضفدع','بومه','نحله','ديك','جمل','بقره','دولفين','تمساح','قرش','نمر','اخطبوط','سمكه','خفاش','اسد','فأر','ذئب','فراشه','عقرب','زرافه','قنفذ','تفاحه','باذنجان'}
+name = DevALS2[math.random(#DevALS2)]
+DevALS:set(YAK..'ALS:GameNum2'..msg.chat_id_,name)
+DevALS:del(YAK..'ALS:Games:Ids'..msg.chat_id_)
+name = string.gsub(name,'دوله لديها علم اخضر','السعوديه')
+name = string.gsub(name,'دجاجه','🐔')
+name = string.gsub(name,'بطريق','🐧')
+name = string.gsub(name,'ضفدع','🐸')
+name = string.gsub(name,'بومه','🦉')
+name = string.gsub(name,'نحله','🐝')
+name = string.gsub(name,'ديك','🐓')
+name = string.gsub(name,'جمل','🐫')
+name = string.gsub(name,'بقره','🐄')
+name = string.gsub(name,'دولفين','🐬')
+name = string.gsub(name,'تمساح','🐊')
+name = string.gsub(name,'قرش','🦈')
+name = string.gsub(name,'نمر','🐅')
+name = string.gsub(name,'اخطبوط','🐙')
+name = string.gsub(name,'سمكه','🐟')
+name = string.gsub(name,'خفاش','🦇')
+name = string.gsub(name,'اسد','🦁')
+name = string.gsub(name,'فأر','🐭')
+name = string.gsub(name,'ذئب','🐺')
+name = string.gsub(name,'فراشه','🦋')
+name = string.gsub(name,'عقرب','🦂')
+name = string.gsub(name,'زرافه','🦒')
+name = string.gsub(name,'قنفذ','🦔')
+name = string.gsub(name,'تفاحه','🍎')
+name = string.gsub(name,'باذنجان','🍆')
+YAKTeam = '⌯︙ما معنى هذا السمايل :؟ ← '..name
+Dev_ALS(msg.chat_id_, msg.id_, 1,YAKTeam, 1, 'md')
+return false
+end end
+if text == DevALS:get(YAK..'ALS:GameNum2'..msg.chat_id_) and not DevALS:get(YAK..'ALS:Games:Ids'..msg.chat_id_) then
+if not DevALS:get(YAK..'ALS:Games:Ids'..msg.chat_id_) then 
+YAKTeam = '⌯︙مبروك لقد ربحت في اللعبه \n⌯︙ارسل ← المعاني للعب مره اخرى'
+Dev_ALS(msg.chat_id_, msg.id_, 1,YAKTeam, 1, 'md')
+DevALS:incrby(YAK..'ALS:GamesNumber'..msg.chat_id_..msg.sender_user_id_, 1)  
+end
+DevALS:set(YAK..'ALS:Games:Ids'..msg.chat_id_,true)
+end
 if text =='نقاطي' and ChCheck(msg) then 
 if tonumber((DevALS:get(YAK..'ALS:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
 Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لم تربح اي نقطه\n⌯︙ارسل ← الالعاب للعب', 1, 'md')
