@@ -7372,7 +7372,7 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:VipMem:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙تم ڪࢦـبي رفعته الك بـ قائمه اࢦـمميزين ")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌯︙*تم ڪࢦـبي رفعته الك بـ قائمه اࢦـمميزين *")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -7386,7 +7386,7 @@ return false
 end
 if result.id_ then
 DevALS:sadd(YAK..'ALS:VipMem:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌯︙تم ڪࢦـبي رفعته الك بـ قائمه اࢦـمميزين ")  
+ReplyStatus(msg,result.id_,"Reply","⌯︙*تم ڪࢦـبي رفعته الك بـ قائمه اࢦـمميزين *")  
 else 
 Dev_ALS(msg.chat_id_, msg.id_, 1, '⌯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -7399,7 +7399,7 @@ Dev_ALS(msg.chat_id_, msg.id_, 1,'⌯︙لاتستطيع رفع احد وذال�
 return false
 end
 DevALS:sadd(YAK..'ALS:VipMem:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌯︙تم ڪࢦـبي رفعته الك بـ قائمه اࢦـمميزين ")  
+ReplyStatus(msg,user,"Reply","⌯︙*تم ڪࢦـبي رفعته الك بـ قائمه اࢦـمميزين *")  
 end
 --     Source YAK     --
 --       Rem Vipmem       --
