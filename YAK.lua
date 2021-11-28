@@ -1085,7 +1085,7 @@ ALS = math.random(4,2824);
 local Text ='*⌯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text="⌗ ⁃ ﭑغـﻧـيه ﭑخࢪىٰ .",callback_data="/Song:"..data.sender_user_id_}},{{text="⌗ ⁃ سـوࢪس و؏ــد .",url="t.me/nnnnBn"}}} 
-return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..ALS..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/Agani_WaaD/'..ALS..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
 --     Source YAK     --
@@ -3093,15 +3093,7 @@ for k,v in pairs(List) do
 DevALS:del(YAK.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
 DevALS:del(YAK.."List:Cmd:Group:New"..msg.chat_id_)
 end
-Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم حذف الاوامر المضافه في المجموعه", 1, 'html')
-end
-if text == "حذف الاوامر المضافه" and ChCheck(msg) or text == "حذف الاوامر" and ChCheck(msg) or text == "مسح الاوامر المضافه" and ChCheck(msg) then
-local List = DevALS:smembers(YAK.."List:Cmd:Group:New"..msg.chat_id_)
-for k,v in pairs(List) do
-DevALS:del(YAK.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
-DevALS:del(YAK.."List:Cmd:Group:New"..msg.chat_id_)
-end
-Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم حذف الاوامر المضافه في المجموعه", 1, 'html')
+Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم حذف الاوامر المضافه في المجموعه*", 1*, 'html')
 end
 if text == "ترتيب الاوامر" and Constructor(msg) and ChCheck(msg) then
 DevALS:set(YAK.."Set:Cmd:Group:New1"..msg.chat_id_..":ا","ايدي")
@@ -11086,7 +11078,7 @@ local Text ='*⌯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text="⌗ ⁃ ﭑغـﻧـيه ﭑخࢪىٰ .",callback_data="/Song:"..msg.sender_user_id_}},{{text = '⌗ ⁃ سـوࢪس و؏ــد .',url="t.me/nnnnBn"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..ALS..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Agani_WaaD/'..ALS..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source YAK     --
 if text == "تفعيل الاغاني" and Manager(msg) and ChCheck(msg) or text == "تفعيل اغنيه" and Manager(msg) and ChCheck(msg) then
