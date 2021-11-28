@@ -3093,7 +3093,7 @@ for k,v in pairs(List) do
 DevALS:del(YAK.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
 DevALS:del(YAK.."List:Cmd:Group:New"..msg.chat_id_)
 end
-Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم حذف الاوامر المضافه في المجموعه*", 1*, 'html')
+Dev_ALS(msg.chat_id_, msg.id_, 1, "⌯︙تم حذف الاوامر المضافه في المجموعه", 1, 'html')
 end
 if text == "ترتيب الاوامر" and Constructor(msg) and ChCheck(msg) then
 DevALS:set(YAK.."Set:Cmd:Group:New1"..msg.chat_id_..":ا","ايدي")
