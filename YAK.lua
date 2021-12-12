@@ -2461,14 +2461,20 @@ CheckFile1 = "(✖️)"
 end
 https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check1="..CheckFile1)
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAll.lua")
-
+if CheckFile1 == "(✔)" then
 if Res == 200 then
 os.execute("rm -fr TagAll.lua")
 os.execute('rm -rf TagAll.lua') 
 send(Chat_Id2, Msg_Id2,"\n⌯︙الملف ← *TagAll.lua*\n⌯︙تم تعطيله وحذفه من البوت بنجاح") 
 dofile('YAK.lua')  
 end
-
+else
+ocal ChekAuto = io.open("TagAll.lua",'w+')
+ChekAuto:write(GetJson)
+ChekAuto:close()
+send(Chat_Id2, Msg_Id2,"\n⌯︙الملف ← *TagAll.lua*\n⌯︙تم تفعيل من البوت بنجاح") 
+dofile('YAK.lua')
+end
 end
 if DataText and DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)') then
 local ALS = DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)')
