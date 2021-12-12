@@ -2475,7 +2475,6 @@ ChekAuto:close()
 send(Chat_Id2, Msg_Id2,"\n⌯︙الملف ← *TagAll.lua*\n⌯︙تم تفعيل من البوت بنجاح") 
 dofile('YAK.lua')
 end
-end
 if DataText and DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)') then
 local ALS = DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)')
 DevALS:set(YAK..'ALS:Lock:Id:Photo'..data.chat_id_,true)
