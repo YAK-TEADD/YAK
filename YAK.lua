@@ -2451,7 +2451,7 @@ keyboard.inline_keyboard = {{{text="تعطيل الايدي بالصوره",call
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(order or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
 --     Source YAK     --
-if DataText  and DataText:match('/TagAll:'..tonumber(data.sender_user_id_)) then
+if DataText  == "/TagAll:" then
 local CheckFileisFound = io.open("TagAll.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
@@ -13050,7 +13050,7 @@ CheckFile2 = "(✖️)"
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text="TagAll.lua ↬ ",callback_data="/TagAll:"..msg.sender_user_id_},{text=CheckFile1,callback_data="/TagAll:"..msg.sender_user_id_}},
+{{text="TagAll.lua ↬ ",callback_data="/TagAll:"},{text=CheckFile1,callback_data="/TagAll:"}},
 {{text="TagAdmins.lua ↬ ",callback_data="/TagAdmins:"..msg.sender_user_id_},{text=CheckFile2,callback_data="/TagAdmins:"..msg.sender_user_id_}},
 {{text="AddedMe.lua ↬ ",callback_data="/HelpList6:"..msg.sender_user_id_},{text=CheckFile3,callback_data="/HelpList5:"..msg.sender_user_id_}},
 {{text="ReplyBot.lua ↬ ",callback_data="/DelList:"..msg.sender_user_id_},{text=CheckFile8,callback_data="/HelpList5:"..msg.sender_user_id_}},
