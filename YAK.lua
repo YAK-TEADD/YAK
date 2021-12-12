@@ -13051,7 +13051,7 @@ end
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text="TagAll.lua ↬ ",callback_data="/TagAll:"},{text=CheckFile1,callback_data="/TagAll:"}},
-{{text="TagAdmins.lua ↬ ",callback_data="/HelpList4:"..msg.sender_user_id_},{text=CheckFile2,callback_data="/HelpList3:"..msg.sender_user_id_}},
+{{text="TagAdmins.lua ↬ ",callback_data="/TagAdmins:"..msg.sender_user_id_},{text=CheckFile2,callback_data="/TagAdmins:"..msg.sender_user_id_}},
 {{text="AddedMe.lua ↬ ",callback_data="/HelpList6:"..msg.sender_user_id_},{text=CheckFile3,callback_data="/HelpList5:"..msg.sender_user_id_}},
 {{text="ReplyBot.lua ↬ ",callback_data="/DelList:"..msg.sender_user_id_},{text=CheckFile8,callback_data="/HelpList5:"..msg.sender_user_id_}},
 {{text="⁃ اخفاء اࢦـڪليشه .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
