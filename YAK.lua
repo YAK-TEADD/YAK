@@ -2465,14 +2465,12 @@ if CheckFile1 == "(✔)" then
 if Res == 200 then
 os.execute("rm -fr TagAll.lua")
 os.execute('rm -rf TagAll.lua') 
-send(Chat_Id2, Msg_Id2,"\n⌯︙الملف ← *TagAll.lua*\n⌯︙تم تعطيله وحذفه من البوت بنجاح") 
 dofile('YAK.lua')  
 end
 else
 local ChekAuto = io.open("TagAll.lua",'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
-send(Chat_Id2, Msg_Id2,"\n⌯︙الملف ← *TagAll.lua*\n⌯︙تم تفعيل من البوت بنجاح") 
 dofile('YAK.lua')
 end
 end
