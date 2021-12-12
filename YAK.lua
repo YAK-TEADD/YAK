@@ -2469,7 +2469,7 @@ send(Chat_Id2, Msg_Id2,"\n⌯︙الملف ← *TagAll.lua*\n⌯︙تم تعطي
 dofile('YAK.lua')  
 end
 else
-ocal ChekAuto = io.open("TagAll.lua",'w+')
+ChekAuto = io.open("TagAll.lua",'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
 send(Chat_Id2, Msg_Id2,"\n⌯︙الملف ← *TagAll.lua*\n⌯︙تم تفعيل من البوت بنجاح") 
