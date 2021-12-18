@@ -2451,7 +2451,7 @@ keyboard.inline_keyboard = {{{text="تعطيل الايدي بالصوره",call
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(order or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
 --     Source YAK     --
-if DataText == "/TagAll:" and DataText:match('/TagAll:'..tonumber(data.sender_user_id_)) then
+if DataText and DataText:match('/TagAll:'..tonumber(data.sender_user_id_)) then
 local CheckFileisFound = io.open("TagAdmins.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
@@ -2481,7 +2481,7 @@ ChekAuto:close()
 dofile('YAK.lua')
 end
 end
-if DataText == "/TagAdmins:" and DataText:match('/TagAdmins:'..tonumber(data.sender_user_id_)) then
+if DataText  and DataText:match('/TagAdmins:'..tonumber(data.sender_user_id_)) then
 local CheckFileisFound = io.open("TagAdmins.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
