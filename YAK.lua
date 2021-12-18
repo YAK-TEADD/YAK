@@ -374,7 +374,7 @@ end
 function Files_YAK(msg)
 for v in io.popen('ls Files'):lines() do
 if v:match(".lua$") then
-plugin = dofile(""..v)
+plugin = dofile("Files/"..v)
 if plugin.YAK and msg then
 FilesText = plugin.YAK(msg)
 end
@@ -2453,28 +2453,28 @@ end end
 --     Source YAK     --
 if DataText and DataText:match('/TagAll:'..tonumber(data.sender_user_id_)) then
 local ALS = DataText:match('/TagAll:(.*)')
-local CheckFileisFound = io.open("TagAdmins.lua","r")
+local CheckFileisFound = io.open("Files/TagAdmins.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile1 = "(✔)"
 else
 CheckFile1 = "(✖️)"
 end
-local CheckFileisFound = io.open("TagAll.lua","r")
+local CheckFileisFound = io.open("Files/TagAll.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile2 = "(✔)"
 else
 CheckFile2 = "(✖️)"
 end
-local CheckFileisFound = io.open("AddedMe.lua","r")
+local CheckFileisFound = io.open("Files/AddedMe.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile3 = "(✔)"
 else
 CheckFile3 = "(✖️)"
 end
-local CheckFileisFound = io.open("ReplyBot.lua","r")
+local CheckFileisFound = io.open("Files/ReplyBot.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile4 = "(✔)"
@@ -2485,12 +2485,12 @@ https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..C
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAll.lua")
 if CheckFile2 == "(✔)" then
 if Res == 200 then
-os.execute("rm -fr TagAll.lua")
-os.execute('rm -rf TagAll.lua') 
+os.execute("rm -fr Files/TagAll.lua")
+os.execute('rm -rf Files/TagAll.lua') 
 dofile('YAK.lua')  
 end
 else
-local ChekAuto = io.open("TagAll.lua",'w+')
+local ChekAuto = io.open("Files/TagAll.lua",'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
 dofile('YAK.lua')
@@ -2498,28 +2498,28 @@ end
 end
 if DataText and DataText:match('/TagAdmins:'..tonumber(data.sender_user_id_)) then
 local ALS = DataText:match('/TagAdmins:(.*)')
-local CheckFileisFound = io.open("TagAdmins.lua","r")
+local CheckFileisFound = io.open("Files/TagAdmins.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile1 = "(✔)"
 else
 CheckFile1 = "(✖️)"
 end
-local CheckFileisFound = io.open("TagAll.lua","r")
+local CheckFileisFound = io.open("Files/TagAll.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile2 = "(✔)"
 else
 CheckFile2 = "(✖️)"
 end
-local CheckFileisFound = io.open("AddedMe.lua","r")
+local CheckFileisFound = io.open("Files/AddedMe.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile3 = "(✔)"
 else
 CheckFile3 = "(✖️)"
 end
-local CheckFileisFound = io.open("ReplyBot.lua","r")
+local CheckFileisFound = io.open("Files/ReplyBot.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile4 = "(✔)"
@@ -2530,12 +2530,12 @@ https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..C
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAdmins.lua")
 if CheckFile1 == "(✔)" then
 if Res == 200 then
-os.execute("rm -fr TagAdmins.lua")
-os.execute('rm -rf TagAdmins.lua') 
+os.execute("rm -fr Files/TagAdmins.lua")
+os.execute('rm -rf Files/TagAdmins.lua') 
 dofile('YAK.lua')  
 end
 else
-local ChekAuto = io.open("TagAdmins.lua",'w+')
+local ChekAuto = io.open("Files/TagAdmins.lua",'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
 dofile('YAK.lua')
@@ -2543,28 +2543,28 @@ end
 end
 if DataText and DataText:match('/AddedMe:'..tonumber(data.sender_user_id_)) then
 local ALS = DataText:match('/AddedMe:(.*)')
-local CheckFileisFound = io.open("TagAdmins.lua","r")
+local CheckFileisFound = io.open("Files/TagAdmins.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile1 = "(✔)"
 else
 CheckFile1 = "(✖️)"
 end
-local CheckFileisFound = io.open("TagAll.lua","r")
+local CheckFileisFound = io.open("Files/TagAll.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile2 = "(✔)"
 else
 CheckFile2 = "(✖️)"
 end
-local CheckFileisFound = io.open("AddedMe.lua","r")
+local CheckFileisFound = io.open("Files/AddedMe.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile3 = "(✔)"
 else
 CheckFile3 = "(✖️)"
 end
-local CheckFileisFound = io.open("ReplyBot.lua","r")
+local CheckFileisFound = io.open("Files/ReplyBot.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile4 = "(✔)"
@@ -2575,12 +2575,12 @@ https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..C
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/AddedMe.lua")
 if CheckFile3 == "(✔)" then
 if Res == 200 then
-os.execute("rm -fr AddedMe.lua")
-os.execute('rm -rf AddedMe.lua') 
+os.execute("rm -fr Files/AddedMe.lua")
+os.execute('rm -rf Files/AddedMe.lua') 
 dofile('YAK.lua')  
 end
 else
-local ChekAuto = io.open("AddedMe.lua",'w+')
+local ChekAuto = io.open("Files/AddedMe.lua",'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
 dofile('YAK.lua')
@@ -2588,28 +2588,28 @@ end
 end
 if DataText and DataText:match('/ReplyBot:'..tonumber(data.sender_user_id_)) then
 local ALS = DataText:match('/ReplyBot:(.*)')
-local CheckFileisFound = io.open("TagAdmins.lua","r")
+local CheckFileisFound = io.open("Files/TagAdmins.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile1 = "(✔)"
 else
 CheckFile1 = "(✖️)"
 end
-local CheckFileisFound = io.open("TagAll.lua","r")
+local CheckFileisFound = io.open("Files/TagAll.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile2 = "(✔)"
 else
 CheckFile2 = "(✖️)"
 end
-local CheckFileisFound = io.open("AddedMe.lua","r")
+local CheckFileisFound = io.open("Files/AddedMe.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile3 = "(✔)"
 else
 CheckFile3 = "(✖️)"
 end
-local CheckFileisFound = io.open("ReplyBot.lua","r")
+local CheckFileisFound = io.open("Files/ReplyBot.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile4 = "(✔)"
@@ -2620,12 +2620,12 @@ https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..C
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/ReplyBot.lua")
 if CheckFile4 == "(✔)" then
 if Res == 200 then
-os.execute("rm -fr ReplyBot.lua")
-os.execute('rm -rf ReplyBot.lua') 
+os.execute("rm -fr Files/ReplyBot.lua")
+os.execute('rm -rf Files/ReplyBot.lua') 
 dofile('YAK.lua')  
 end
 else
-local ChekAuto = io.open("ReplyBot.lua",'w+')
+local ChekAuto = io.open("Files/ReplyBot.lua",'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
 dofile('YAK.lua')
@@ -13154,28 +13154,28 @@ local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
 local TextE = "⌯︙قائمة ملفات متجر سورس وعد\n⌯︙الملفات المتوفره حاليا ← ⤈\n┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉\n⌯︙علامة ← (✔) تعني الملف مفعل\n⌯︙علامة ← (✖️) تعني الملف معطل\n┉ ┉ ┉ 𝚆𝙰𝙰𝙳┉ ┉ ┉ ┉"
-local CheckFileisFound = io.open("TagAll.lua","r")
+local CheckFileisFound = io.open("Files/TagAll.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile1 = "(✔)"
 else
 CheckFile1 = "(✖️)"
 end
-local CheckFileisFound = io.open("AddedMe.lua","r")
+local CheckFileisFound = io.open("Files/AddedMe.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile3 = "(✔)"
 else
 CheckFile3 = "(✖️)"
 end
-local CheckFileisFound = io.open("ReplyBot.lua","r")
+local CheckFileisFound = io.open("Files/ReplyBot.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile8 = "(✔)"
 else
 CheckFile8 = "(✖️)"
 end
-local CheckFileisFound = io.open("TagAdmins.lua","r")
+local CheckFileisFound = io.open("Files/TagAdmins.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile2 = "(✔)"
@@ -13186,7 +13186,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text="TagAll.lua ↬ ",callback_data="/TagAll:"..msg.sender_user_id_},{text=CheckFile1,callback_data="/TagAll:"..msg.sender_user_id_}},
 {{text="TagAdmins.lua ↬ ",callback_data="/TagAdmins:"..msg.sender_user_id_},{text=CheckFile2,callback_data="/TagAdmins:"..msg.sender_user_id_}},
-{{text="AddedMe.lua ↬ ",callback_data="/AddedMe:"..msg.sender_user_id_},{text=CheckFile3,callback_data="/AddedMe:"..msg.sender_user_id_}},
+{{text="/AddedMe.lua ↬ ",callback_data="/AddedMe:"..msg.sender_user_id_},{text=CheckFile3,callback_data="/AddedMe:"..msg.sender_user_id_}},
 {{text="ReplyBot.lua ↬ ",callback_data="/ReplyBot:"..msg.sender_user_id_},{text=CheckFile8,callback_data="/ReplyBot:"..msg.sender_user_id_}},
 {{text="⁃ اخفاء اࢦـڪليشه .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
@@ -13202,7 +13202,7 @@ local FileGet = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/"..FileName)
 if Res == 200 then
-os.execute("rm -fr "..FileName)
+os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n⌯︙الملف ← *"..FileName.."*\n⌯︙تم تعطيله وحذفه من البوت بنجاح") 
 dofile('YAK.lua')  
 else
@@ -13214,7 +13214,7 @@ local FileGet = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/"..FileName)
 if Res == 200 then
-local ChekAuto = io.open(""..FileName,'w+')
+local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
 send(msg.chat_id_, msg.id_,"\n⌯︙الملف ← *"..FileName.."*\n⌯︙تم تفعيله في البوت بنجاح") 
