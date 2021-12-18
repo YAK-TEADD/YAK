@@ -2496,7 +2496,7 @@ CheckFile2 = "(✔)"
 else
 CheckFile2 = "(✖️)"
 end
-https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&check1="..CheckFile2.."&put=TagAdmins1")
+https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&check1="..CheckFile2.."&put=TagAdmins2")
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAdmins.lua")
 if CheckFile1 == "(✔)" then
 if Res == 200 then
@@ -13064,7 +13064,7 @@ CheckFile2 = "(✖️)"
 end
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text="TagAll.lua ↬ ",callback_data="/TagAll:"},{text=CheckFile1,callback_data="/TagAll:"}},
+{{text="TagAll.lua ↬ ",callback_data="/TagAll:"..msg.sender_user_id_},{text=CheckFile1,callback_data="/TagAll:"..msg.sender_user_id_}},
 {{text="TagAdmins.lua ↬ ",callback_data="/TagAdmins:"..msg.sender_user_id_},{text=CheckFile2,callback_data="/TagAdmins:"..msg.sender_user_id_}},
 {{text="AddedMe.lua ↬ ",callback_data="/HeسlpList6:"..msg.sender_user_id_},{text=CheckFile3,callback_data="/س:"..msg.sender_user_id_}},
 {{text="ReplyBot.lua ↬ ",callback_data="/DelسList:"..msg.sender_user_id_},{text=CheckFile8,callback_data="/ش:"..msg.sender_user_id_}},
