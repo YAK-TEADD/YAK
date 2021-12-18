@@ -13066,8 +13066,8 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text="TagAll.lua ↬ ",callback_data="/TagAll:"},{text=CheckFile1,callback_data="/TagAll:"}},
 {{text="TagAdmins.lua ↬ ",callback_data="/TagAdmins:"..msg.sender_user_id_},{text=CheckFile2,callback_data="/TagAdmins:"..msg.sender_user_id_}},
-{{text="AddedMe.lua ↬ ",callback_data="/HelpList6:"..msg.sender_user_id_},{text=CheckFile3,callback_data="/HelpList5:"..msg.sender_user_id_}},
-{{text="ReplyBot.lua ↬ ",callback_data="/DelList:"..msg.sender_user_id_},{text=CheckFile8,callback_data="/HelpList5:"..msg.sender_user_id_}},
+{{text="AddedMe.lua ↬ ",callback_data="/HeسlpList6:"..msg.sender_user_id_},{text=CheckFile3,callback_data="/س:"..msg.sender_user_id_}},
+{{text="ReplyBot.lua ↬ ",callback_data="/DelسList:"..msg.sender_user_id_},{text=CheckFile8,callback_data="/ش:"..msg.sender_user_id_}},
 {{text="⁃ اخفاء اࢦـڪليشه .",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(TextE).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
