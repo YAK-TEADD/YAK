@@ -2452,14 +2452,21 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText
 end end
 --     Source YAK     --
 if DataText == "/TagAll:" and DataText:match('/TagAll:'..tonumber(data.sender_user_id_)) then
-local CheckFileisFound = io.open("TagAll.lua","r")
+local CheckFileisFound = io.open("TagAdmins.lua","r")
 if CheckFileisFound then
 io.close(CheckFileisFound)
 CheckFile1 = "(✔)"
 else
 CheckFile1 = "(✖️)"
 end
-https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check1="..CheckFile1)
+local CheckFileisFound = io.open("TagAll.lua","r")
+if CheckFileisFound then
+io.close(CheckFileisFound)
+CheckFile2 = "(✔)"
+else
+CheckFile2 = "(✖️)"
+end
+https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&check1="..CheckFile2.."&put=TagAll")
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAll.lua")
 if CheckFile1 == "(✔)" then
 if Res == 200 then
@@ -2482,7 +2489,14 @@ CheckFile1 = "(✔)"
 else
 CheckFile1 = "(✖️)"
 end
-https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1)
+local CheckFileisFound = io.open("TagAll.lua","r")
+if CheckFileisFound then
+io.close(CheckFileisFound)
+CheckFile2 = "(✔)"
+else
+CheckFile2 = "(✖️)"
+end
+https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&check1="..CheckFile2)
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAdmins.lua")
 if CheckFile1 == "(✔)" then
 if Res == 200 then
